@@ -1,0 +1,9 @@
+revenue : FLOAT
+user_id : INTEGER
+timeonsite : FLOAT
+visits : INTEGER
+gender : BOOLEAN
+revenue_class : STRING
+revenue_class_avg : FLOAT
+ingestion_datetime : TIMESTAMP
+

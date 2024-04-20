@@ -1,0 +1,9 @@
+revenue : float64
+user_id : int
+timeonsite : float64
+visits : int
+gender : bool
+revenue_class : str
+revenue_class_avg : float64
+ingestion_datetime : datetime64[ns]
+
