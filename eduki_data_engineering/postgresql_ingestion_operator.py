@@ -1,12 +1,11 @@
 from eduki_data_engineering.utils.data_processor import DataProcessor
 from eduki_data_engineering.utils.config_parsers import get_ini_config_object
 from eduki_data_engineering.utils.postgresql_bulk_writer import PostgreSQLBulkWriter
-from logging import Logger, getLogger
-from logging.config import fileConfig
+import logging 
 
 
-fileConfig("configs/logging.ini")
-log: Logger = getLogger()
+log = logging.getLogger(__name__)
+log.setLevel(logging.INFO)
 
 class PostgreSQLIngestionOperator(DataProcessor):
 

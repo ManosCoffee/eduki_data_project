@@ -4,11 +4,11 @@ import logging
 import os
 import json
 from typing import Dict
-from logging import Logger, getLogger
-from logging.config import fileConfig
+import logging
 import yaml
 
-log: Logger = getLogger()
+log = logging.getLogger(__name__)
+log.setLevel(logging.INFO)
 
 
 

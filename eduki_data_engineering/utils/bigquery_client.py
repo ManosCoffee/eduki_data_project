@@ -6,12 +6,12 @@ from eduki_data_engineering.utils.config_parsers import (
 )
 import pyarrow.parquet as pq
 import pandas_gbq as bq 
-from logging import Logger, getLogger
-from logging.config import fileConfig
+import logging  
 
 
-fileConfig("configs/logging.ini")
-log: Logger = getLogger()
+log = logging.getLogger(__name__)
+log.setLevel(logging.INFO)
+
 
 @set_gcp_credentials()
 @set_eduki_bq_table()

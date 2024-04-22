@@ -8,11 +8,12 @@ from typing import List, Dict, Tuple
 from datetime import datetime
 from logging import Logger, getLogger
 from logging.config import fileConfig
+from os.path import abspath, dirname, join
+from eduki_data_engineering.utils.eduki_root_logger import configure_root_logger
+import logging
 
-
-fileConfig("configs/logging.ini")
-log: Logger = getLogger()
-
+configure_root_logger(log_level=logging.INFO)
+log = logging.getLogger(__name__)
 
 class DataProcessor(ABC):
 

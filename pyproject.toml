@@ -1,3 +1,12 @@
+
+[project]
+name = "eduki_data_engineering"
+version = "0.0.1"
+readme = "README.md"
+requires-python = ">=3.9"
+
+
+
 [tool.poetry]
 name = "eduki_data_engineering"
 version = "0.1.0"
@@ -6,11 +15,11 @@ authors = ["Emmanouil (Manos) Palaiologos <manoscoffee@gmail.com>"]
 readme = "README.md"
 packages = [{include = "eduki_data_engineering"}]
 
+
 [tool.poetry.dependencies]
 python = "^3.9"
 google-cloud-bigquery = "*"
 pandas = "^2.2.2"
-polars = "^0.20.21"
 psycopg2-binary = "^2.9.9"
 numpy = "^1.26.4"
 pyyaml = "^6.0.1"

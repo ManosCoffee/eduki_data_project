@@ -4,13 +4,11 @@ import pandas as pd
 from eduki_data_engineering.utils.config_parsers import set_postgres_credentials
 import numpy as np
 from typing import List
-from logging import Logger, getLogger
-from logging.config import fileConfig
+import logging
 
 
-fileConfig("configs/logging.ini")
-log: Logger = getLogger()
-
+log = logging.getLogger(__name__)
+sentiment_logger.setLevel(logging.INFO)
 
 @set_postgres_credentials()
 class PostgreSQLBulkWriter:

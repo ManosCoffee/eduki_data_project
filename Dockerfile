@@ -21,15 +21,17 @@ WORKDIR /eduki
 # Copy Project Files
 COPY . .
 
-WORKDIR /eduki/eduki_data_engineering
 
 RUN chmod -R 755 .
+
+
+COPY .envrc .envrc
+COPY .private_key.pem .private_key.pem 
+RUN chmod 600 .private_key.pem
 
 # Install Dependencies
 RUN poetry install --no-interaction --no-cache 
 
-# CMD ["poetry", "run", "python", "bq.py"]
-# ENTRYPOINT ["poetry", "run"]
 CMD ["tail", "-f", "/dev/null"]
 
 

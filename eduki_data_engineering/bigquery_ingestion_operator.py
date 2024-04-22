@@ -7,11 +7,10 @@ from eduki_data_engineering.utils.config_parsers import (
     set_bq_schema,
     set_eduki_bq_table,
 )
-from logging import Logger, getLogger
-from logging.config import fileConfig
+import logging 
 
-fileConfig("configs/logging.ini")
-log: Logger = getLogger()
+log = logging.getLogger(__name__)
+log.setLevel(logging.INFO)
 
 
 @set_bq_schema()
