@@ -24,6 +24,10 @@ run:
 	-e GCP_CLIENT_CERT_URL=${GCP_CLIENT_CERT_URL} \
 	eduki_image poetry run python -m eduki_data_engineering."$(MODULE_NAME)"
 
+up:
+	docker-compose up -d
+
+
 # Help target to display usage information
 help:
 	@echo "Usage: make [target]"
